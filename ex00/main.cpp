@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:46:13 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/20 16:57:30 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:09:21 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ int	main(int ac, char **av)
 		return (1);
 	}
 	std::string	input = av[1];
-	ScalarConverter::convert(input);
-	return (0);
+	return (ScalarConverter::convert(input));
 }

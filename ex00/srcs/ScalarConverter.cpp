@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:45:51 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/20 18:39:47 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:09:34 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,17 +60,18 @@ bool	onlyDigit(std::string input)
 	return (false);
 }
 
-void	ScalarConverter::convert(std::string input)
+int	ScalarConverter::convert(std::string input)
 {
-	if (onlyDigit(input) == false)
+	if (onlyDigit(input) == false || (input.size() > 9 && input[9]!= 'f'))
 	{
 		std::cout << "invalid argument" << std::endl;
-		return ;
+		return (1);
 	}
 	ScalarConverter::printChar(input);
 	ScalarConverter::printInt(input);
 	ScalarConverter::printFloat(input);
 	ScalarConverter::printDouble(input);
+	return (0);
 }
 
 void	ScalarConverter::printChar(std::string str)

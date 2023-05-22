@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:45:57 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/20 18:41:50 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:10:53 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ScalarConverter
 
 		ScalarConverter	&operator = (ScalarConverter const &toCopy);
 
-		static void		convert(std::string input);
+		static int		convert(std::string input);
 
 		static void		printChar(std::string str);
 		static void		printInt(std::string str);
