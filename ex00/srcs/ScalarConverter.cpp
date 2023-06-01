@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:45:51 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/22 14:09:34 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/05/25 14:57:12 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ bool	onlyDigit(std::string input)
 	int	i = 0;
 	int	eskilyadespouainx = 0;
 
-	if (input.compare("nan") == 0 || input.compare("+inf") == 0 || input.compare("-inf") == 0)
+	if (input.compare("nan") == 0 || input.compare("+inf") == 0 || input.compare("-inf") == 0
+		|| input.compare("nanf") == 0 || input.compare("+inff") == 0 || input.compare("-inff") == 0)
 		return (true);
 	if (input[0] == '-' || input[0] == '+')
 		i++;
@@ -136,6 +137,8 @@ void	ScalarConverter::printFloat(std::string str)
 	}
 	else if (str.compare("nan") == 0 || str.compare("+inf") == 0 || str.compare("-inf") == 0)
 		std::cout << "Float : " << str << "f" << std::endl;
+	else if (str.compare("nanf") == 0 || str.compare("+inff") == 0 || str.compare("-inff") == 0)
+		std::cout << "Float : " << str << std::endl;
 	else if (str.compare("pi") == 0)
 		std::cout << "3.14159265358979323846f" << std::endl;
 	else
@@ -150,7 +153,9 @@ void	ScalarConverter::printDouble(std::string str)
 	if (iss >> d)
 		std::cout << "Double : " << d << std::endl;
 	else if (str.compare("nan") == 0 || str.compare("+inf") == 0 || str.compare("-inf") == 0)
-		std::cout << "Float : " << str << std::endl;
+		std::cout << "Double : " << str << std::endl;
+	else if (str.compare("nanf") == 0 || str.compare("+inff") == 0 || str.compare("-inff") == 0)
+		std::cout << "Double : " << str.replace(str.size() - 1, 1, "\0") << std::endl;
 	else if (str.compare("pi") == 0)
 		std::cout << "3.14159265358979323846" << std::endl;
 	else
