@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:45:57 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/22 14:10:53 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/06/28 01:46:19 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 class ScalarConverter
 {
 	private:
+		ScalarConverter(void);
 
 	public:
 
-		ScalarConverter(void);
 		ScalarConverter(ScalarConverter const &copy);
 		~ScalarConverter(void);
 
