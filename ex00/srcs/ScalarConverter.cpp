@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:45:51 by msharifi          #+#    #+#             */
-/*   Updated: 2023/05/25 14:57:12 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/06/27 14:49:40 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ bool	onlyDigit(std::string input)
 		return (true);
 	if (input[0] == '-' || input[0] == '+')
 		i++;
-	while ((input[i] && (input[i] <= '9' && input[i] >= '0')))
+	while ((input[i] && (input[i] <= '9' && input[i] >= '0')) || input[i] == '.')
 	{
 		if (input[i] == '.')
 			eskilyadespouainx++;
