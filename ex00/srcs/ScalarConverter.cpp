@@ -6,7 +6,7 @@
 /*   By: msharifi <msharifi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:45:51 by msharifi          #+#    #+#             */
-/*   Updated: 2023/06/27 14:49:40 by msharifi         ###   ########.fr       */
+/*   Updated: 2023/06/27 17:22:34 by msharifi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ bool	onlyDigit(std::string input)
 	int	i = 0;
 	int	eskilyadespouainx = 0;
 
+	if (input == "pi")
+		return (true);
 	if (input.compare("nan") == 0 || input.compare("+inf") == 0 || input.compare("-inf") == 0
 		|| input.compare("nanf") == 0 || input.compare("+inff") == 0 || input.compare("-inff") == 0)
 		return (true);
@@ -98,6 +100,8 @@ void	ScalarConverter::printChar(std::string str)
 			std::cout << "Char : Non displayable" << std::endl;
 
 	}
+	else if (str == "pi")
+		std::cout << "Char : pi" << std::endl;
 	else
 		std::cout << "Char : impossible" << std::endl;
 }
@@ -110,7 +114,7 @@ void	ScalarConverter::printInt(std::string str)
 	if (iss >> i)
 		std::cout << "Int : " << i << std::endl;
 	else if (str.compare("pi") == 0)
-		std::cout << "3" << std::endl;
+		std::cout << "Int : 3" << std::endl;
 	else
 		std::cout << "Int : impossible" << std::endl;
 }
@@ -140,7 +144,7 @@ void	ScalarConverter::printFloat(std::string str)
 	else if (str.compare("nanf") == 0 || str.compare("+inff") == 0 || str.compare("-inff") == 0)
 		std::cout << "Float : " << str << std::endl;
 	else if (str.compare("pi") == 0)
-		std::cout << "3.14159265358979323846f" << std::endl;
+		std::cout << "Float : 3.14159265358979323846f" << std::endl;
 	else
 		std::cout << "Float : impossible" << std::endl;
 }
@@ -157,7 +161,7 @@ void	ScalarConverter::printDouble(std::string str)
 	else if (str.compare("nanf") == 0 || str.compare("+inff") == 0 || str.compare("-inff") == 0)
 		std::cout << "Double : " << str.replace(str.size() - 1, 1, "\0") << std::endl;
 	else if (str.compare("pi") == 0)
-		std::cout << "3.14159265358979323846" << std::endl;
+		std::cout << "Double : 3.14159265358979323846" << std::endl;
 	else
 		std::cout << "Double : impossible" << std::endl;
 }
